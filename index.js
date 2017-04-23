@@ -19,7 +19,7 @@ app.post("/", (req, res) => {
 		issue: req.body.issue,
 		comment: req.body.comment
 	};
-	res.redirect(`https://github.com/login/oauth/authorize?client_id=${config.client_id}&redirect_uri=${redirect}&scope=user&state=${state}`);
+	res.redirect(`https://github.com/login/oauth/authorize?client_id=${config.client_id}&redirect_uri=${redirect}&scope=public_repo&state=${state}`);
 });
 
 app.get("/", (req, res) => {
